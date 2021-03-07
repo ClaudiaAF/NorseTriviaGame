@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 
 class CategoriesPage : AppCompatActivity() {
@@ -19,5 +20,13 @@ class CategoriesPage : AppCompatActivity() {
         val userName = intent.getStringExtra(EXTRA_MESSAGE)
 
         categorieshi.text = "Greetings " + userName
+
+        val button = findViewById<Button>(R.id.gods_category)
+
+        button.setOnClickListener {
+            val intent = Intent (this, QuestionOneGods::class.java)
+
+            startActivity(intent)
+        }
     }
 }

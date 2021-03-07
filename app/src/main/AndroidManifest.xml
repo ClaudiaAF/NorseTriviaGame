@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NorseTriviaGame">
-        <activity android:name=".CategoriesPage"></activity>
+        <activity android:name=".QuestionThreeGods"></activity>
+        <activity android:name=".QuestionTwoGods" />
+        <activity android:name=".QuestionOneGods" />
+        <activity android:name=".CategoriesPage" />
         <activity
             android:name=".EnterName"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
