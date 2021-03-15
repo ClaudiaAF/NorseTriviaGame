@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_one_gods.*
-import kotlinx.android.synthetic.main.activity_question_two_gods.*
 
 class QuestionOneGods : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,9 +16,9 @@ class QuestionOneGods : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringArrayExtra(QuestionsGods.USER_NAME)
+        val userName = intent.getStringArrayExtra(Constants.USER_NAME)
 
-        val questionsList = QuestionsGods.getQuestions()
+        val questionsList = Constants.getGodsQuestions()
         Log.i("QuestionsList: ", "${questionsList.size}")
 
         //set question number and array
@@ -57,7 +56,7 @@ class QuestionOneGods : AppCompatActivity() {
 //
 
                 val intent = Intent(this, QuestionTwoGods::class.java)
-                intent.putExtra(QuestionsGods.CORRECT_ANSWER, correctAnswer)
+                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
                 startActivity(intent)
                 finish()
             } else {

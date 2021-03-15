@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.norsetriviagame.Constants.USER_NAME
 import org.w3c.dom.Text
 
 class EnterName : AppCompatActivity() {
@@ -23,7 +24,7 @@ class EnterName : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, CategoriesPage::class.java).apply {
-                    putExtra(EXTRA_MESSAGE, etname.text.toString())
+                    putExtra(USER_NAME, etname.text.toString())
                 }
                 startActivity(intent)
                 finish()

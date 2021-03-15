@@ -7,6 +7,7 @@ import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.norsetriviagame.Constants.USER_NAME
 
 class CategoriesPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class CategoriesPage : AppCompatActivity() {
 
         val categorieshi = findViewById<TextView>(R.id.categories_hi)
 
-        val userName = intent.getStringExtra(EXTRA_MESSAGE)
+        val userName = intent.getStringExtra(USER_NAME)
 
         categorieshi.text = "Greetings " + userName
 

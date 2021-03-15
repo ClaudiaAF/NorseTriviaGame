@@ -3,12 +3,9 @@ package com.example.norsetriviagame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_question_one_gods.*
-import kotlinx.android.synthetic.main.activity_question_three_gods.*
 import kotlinx.android.synthetic.main.activity_question_two_gods.*
 import kotlinx.android.synthetic.main.activity_question_two_gods.pb_progressBar2
 
@@ -19,9 +16,9 @@ class QuestionTwoGods : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringExtra(QuestionsGods.USER_NAME)
+        val userName = intent.getStringExtra(Constants.USER_NAME)
 
-        val questionsList = QuestionsGods.getQuestions()
+        val questionsList = Constants.getGodsQuestions()
 
         //set question number and array
         val questionNumber: Int = 2
@@ -40,7 +37,7 @@ class QuestionTwoGods : AppCompatActivity() {
         var answers: RadioButton
         var correctAnswer: Int = 0
 
-        val correctAnswers = intent.getIntExtra(QuestionsGods.CORRECT_ANSWER, 0)
+        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
         tv_correctAnswer2.text = correctAnswers.toString()
 
         btn_next2.setOnClickListener{
@@ -58,11 +55,11 @@ class QuestionTwoGods : AppCompatActivity() {
                     correctAnswer++
                 }
 
-                val correctAnswer = intent.getIntExtra(QuestionsGods.CORRECT_ANSWER, 0)
+                val correctAnswer = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
                 tv_correctAnswer2.text = correctAnswer.toString()
 
                 val intent = Intent(this, QuestionThreeGods::class.java)
-                intent.putExtra(QuestionsGods.CORRECT_ANSWER, correctAnswer)
+                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
                 startActivity(intent)
                 finish()
             } else {
