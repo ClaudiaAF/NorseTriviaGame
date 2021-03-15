@@ -89,4 +89,46 @@ object Constants {
 
     }
 
+    fun getWeaponryQuestions(): ArrayList<Questions> {
+
+
+        val questionsList = ArrayList<Questions>()
+        val que1 = Questions(
+            1,
+            "What was the name of Thor's infamous hammer?",
+            R.drawable.norse_logo,
+            "Midgard",
+            "Thor's Hammer",
+            "Mjolnir"
+
+        )
+
+        val que2 = Questions(
+            2,
+            "What is the name of the great spear wielded by Odin?",
+            R.drawable.norse_logo,
+            "Dainsleif",
+            "Gungnir",
+            "Laevateinn"
+
+        )
+
+        val que3 = Questions(
+            3,
+            "Which sword did Sigurd use to slay the great dragon, Fafnir?",
+            R.drawable.norse_logo,
+            "Dragon Slayer",
+            "Skofnung",
+            "Gram"
+
+        )
+
+        questionsList.add(que1)
+        questionsList.add(que2)
+        questionsList.add(que3)
+
+        return questionsList
+
+    }
+
 }
