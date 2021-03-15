@@ -31,7 +31,7 @@ object QuestionsGods {
 
         val que3 = Questions(
                 3,
-                "Who was Odin's wife?",
+                "Who ruled in Hel?",
                 R.drawable.norse_logo,
                 "Freya",
                 "Frigga",
