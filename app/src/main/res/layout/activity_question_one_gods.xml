@@ -10,12 +10,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scaleType="fitEnd"
-    android:src="@drawable/background_patterns"></ImageView>
+    android:src="@drawable/pattern_background"></ImageView>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/bragi_god_of_poetry"></ImageView>
+        android:src="@drawable/bragi"></ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
