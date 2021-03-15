@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".QuestionTwoGods">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +26,8 @@
 
         </ProgressBar>
 
+
+
         <TextView
             android:id="@+id/tv_progress2"
             android:layout_width="wrap_content"
@@ -40,12 +43,7 @@
 
     </LinearLayout>
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/myImageView"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:src="@drawable/image_que_one"-->
-    <!--        android:scaleType="fitStart"/>-->
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,6 +62,14 @@
             android:paddingTop="170dp"
             android:text="The question will go here.The question will go here."
             android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_correctAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="correct answers"
+            ></TextView>
 
         <RadioGroup
             android:id="@+id/rg2_options"

@@ -8,6 +8,7 @@ import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_three_gods.*
 import kotlinx.android.synthetic.main.activity_question_two_gods.*
+import kotlinx.android.synthetic.main.activity_results_gods2.*
 
 class QuestionThreeGods : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,8 @@ class QuestionThreeGods : AppCompatActivity() {
 
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
+        val userName = intent.getStringExtra(QuestionsGods.USER_NAME)
 
         val questionsList = QuestionsGods.getQuestions()
 
@@ -36,6 +39,10 @@ class QuestionThreeGods : AppCompatActivity() {
         var answers: RadioButton
         var correctAnswer: Int = 0
 
+        val correctAnswers = intent.getIntExtra(QuestionsGods.CORRECT_ANSWER, 0)
+        tv_correctAnswer3.text = correctAnswers.toString()
+
+
         btn_next3.setOnClickListener{
             var id: Int = rg3_options.checkedRadioButtonId
             if(id != -1){
@@ -43,13 +50,16 @@ class QuestionThreeGods : AppCompatActivity() {
                 answers = findViewById(id)
 
 
-                // Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
+                 Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
 
 
 
-                if (answers.text == question.optionThree){
+                if (answers.text == question.optionTwo){
                     correctAnswer++
                 }
+
+                val correctAnswer = intent.getIntExtra(QuestionsGods.CORRECT_ANSWER, 0)
+                tv_correctAnswer3.text = correctAnswer.toString()
 
                 val intent = Intent(this, ResultsGods::class.java)
                 intent.putExtra(QuestionsGods.CORRECT_ANSWER, correctAnswer)

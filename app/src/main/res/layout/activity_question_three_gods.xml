@@ -65,6 +65,14 @@
             android:text="The question will go here.The question will go here."
             android:textColor="@color/black"/>
 
+        <TextView
+            android:id="@+id/tv_correctAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="correct answers"
+            ></TextView>
+
         <RadioGroup
             android:id="@+id/rg3_options"
             android:layout_width="match_parent"

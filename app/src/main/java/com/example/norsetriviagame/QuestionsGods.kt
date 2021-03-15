@@ -2,6 +2,7 @@ package com.example.norsetriviagame
 
 object QuestionsGods {
 
+    const val USER_NAME : String = "username"
     const val CORRECT_ANSWER : String = "correctAnswer"
 
     fun getQuestions(): ArrayList<Questions> {

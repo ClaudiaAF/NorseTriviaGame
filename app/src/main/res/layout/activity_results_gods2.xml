@@ -14,12 +14,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_correctAnswer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="correct answers"
+            ></TextView>
+
+        <TextView
             android:layout_width="437dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:padding="60dp"
-            android:text="WOHOO! You finished the quiz!"
+            android:text="Well done, brave one"
             android:textAlignment="center"
             android:textSize="30sp">
 
@@ -30,7 +38,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Back to Categories"
+            android:text="Another, please"
             android:backgroundTint="@color/black"></Button>
 
     </LinearLayout>

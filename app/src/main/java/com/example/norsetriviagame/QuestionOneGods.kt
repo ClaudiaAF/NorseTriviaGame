@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_one_gods.*
+import kotlinx.android.synthetic.main.activity_question_two_gods.*
 
 class QuestionOneGods : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,8 @@ class QuestionOneGods : AppCompatActivity() {
         setContentView(R.layout.activity_question_one_gods)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
+        val userName = intent.getStringArrayExtra(QuestionsGods.USER_NAME)
 
         val questionsList = QuestionsGods.getQuestions()
         Log.i("QuestionsList: ", "${questionsList.size}")
@@ -38,18 +41,20 @@ class QuestionOneGods : AppCompatActivity() {
 
         btn_next.setOnClickListener{
             var id: Int = rg_options.checkedRadioButtonId
+
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
 
 
-                // Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
+                 Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
 
 
 
                 if (answers.text == question.optionOne){
                     correctAnswer++
                 }
+//
 
                 val intent = Intent(this, QuestionTwoGods::class.java)
                 intent.putExtra(QuestionsGods.CORRECT_ANSWER, correctAnswer)
