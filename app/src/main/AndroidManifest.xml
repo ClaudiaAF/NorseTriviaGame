@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NorseTriviaGame">
-        <activity android:name=".QuestionThreePlaces"></activity>
-        <activity android:name=".QuestionTwoPlaces"></activity>
+        <activity android:name=".QuestionOneWeapons"></activity>
+        <activity android:name=".QuestionThreePlaces" />
+        <activity android:name=".QuestionTwoPlaces" />
         <activity android:name=".QuestionOnePlaces" />
         <activity android:name=".ResultsGods" />
         <activity android:name=".QuestionThreeGods" />
