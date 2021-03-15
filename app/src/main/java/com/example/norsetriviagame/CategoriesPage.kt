@@ -23,9 +23,16 @@ class CategoriesPage : AppCompatActivity() {
         categorieshi.text = "Greetings " + userName
 
         val button = findViewById<Button>(R.id.gods_category)
+        val button_places = findViewById<Button>(R.id.places_category)
 
         button.setOnClickListener {
             val intent = Intent (this, QuestionOneGods::class.java)
+
+            startActivity(intent)
+        }
+
+        button_places.setOnClickListener{
+            val intent = Intent (this, QuestionOnePlaces::class.java)
 
             startActivity(intent)
         }
