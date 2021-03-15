@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".QuestionOneGods">
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitEnd"
+    android:src="@drawable/background_patterns"></ImageView>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/q1_image"></ImageView>
+        android:src="@drawable/bragi_god_of_poetry"></ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
