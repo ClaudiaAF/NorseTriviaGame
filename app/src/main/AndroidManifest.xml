@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NorseTriviaGame">
-        <activity android:name=".QuestionTwoWeapons"></activity>
+        <activity android:name=".QuestionThreeWeapons"></activity>
+        <activity android:name=".QuestionTwoWeapons" />
         <activity android:name=".QuestionOneWeapons" />
         <activity android:name=".QuestionThreePlaces" />
         <activity android:name=".QuestionTwoPlaces" />

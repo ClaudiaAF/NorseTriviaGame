@@ -6,13 +6,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_question_three_weapons.*
 import kotlinx.android.synthetic.main.activity_question_two_gods.*
 import kotlinx.android.synthetic.main.activity_question_two_weapons.*
 
-class QuestionTwoWeapons : AppCompatActivity() {
+class QuestionThreeWeapons : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question_two_weapons)
+        setContentView(R.layout.activity_question_three_weapons)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
@@ -21,27 +22,27 @@ class QuestionTwoWeapons : AppCompatActivity() {
         val questionsList = Constants.getWeaponryQuestions()
 
         //set question number and array
-        val questionNumber: Int = 2
+        val questionNumber: Int = 3
         val question: Questions = questionsList[questionNumber-1]
 
         //set UI elements to question 1
-        tv_question_weapons2.text = question.question
-        rb_answer_one_weapons2.text = question.optionOne
-        rb_answer_two_weapons2.text = question.optionTwo
-        rb_answer_three_weapons2.text = question.optionThree
+        tv_question_weapons3.text = question.question
+        rb_answer_one_weapons3.text = question.optionOne
+        rb_answer_two_weapons3.text = question.optionTwo
+        rb_answer_three_weapons3.text = question.optionThree
 
-        pb_progressBar_weapons2.progress = questionNumber
-        tv_progress_weapons2.text = questionNumber.toString() + "/" + questionsList.size.toString()
+        pb_progressBar_weapons3.progress = questionNumber
+        tv_progress_weapons3.text = questionNumber.toString() + "/" + questionsList.size.toString()
 
         //set a button on click listener
         var answers: RadioButton
         var correctAnswer: Int = 0
 
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-        tv_correctAnswer_weapons2.text = correctAnswers.toString()
+        tv_correctAnswer_weapons3.text = correctAnswers.toString()
 
-        btn_next_weapons2.setOnClickListener{
-            var id: Int = rg_options_weapons2.checkedRadioButtonId
+        btn_next_weapons3.setOnClickListener{
+            var id: Int = rg_options_weapons3.checkedRadioButtonId
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
@@ -51,14 +52,14 @@ class QuestionTwoWeapons : AppCompatActivity() {
 
 
 
-                if (answers.text == question.optionTwo){
+                if (answers.text == question.optionThree){
                     correctAnswer++
                 }
 
                 val correctAnswer = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-                tv_correctAnswer_weapons2.text = correctAnswer.toString()
+                tv_correctAnswer_weapons3.text = correctAnswer.toString()
 
-                val intent = Intent(this, QuestionThreeWeapons::class.java)
+                val intent = Intent(this, ResultsGods::class.java)
                 intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
                 startActivity(intent)
                 finish()
