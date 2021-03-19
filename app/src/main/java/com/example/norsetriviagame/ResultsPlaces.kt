@@ -8,10 +8,6 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_results_gods.*
 import kotlinx.android.synthetic.main.activity_results_gods2.*
-import kotlinx.android.synthetic.main.activity_results_places.*
-import kotlinx.android.synthetic.main.activity_results_places.result_score2
-import kotlinx.android.synthetic.main.activity_results_places2.*
-import kotlinx.android.synthetic.main.activity_results_places2.result_score
 
 class ResultsPlaces : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
