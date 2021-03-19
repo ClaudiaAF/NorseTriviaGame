@@ -54,9 +54,11 @@ class CategoriesPage : AppCompatActivity() {
 
             val godsCorrectAnswer = sharedPref.getInt(Constants.HIGHEST_GODS_CORRECT_ANSWER, 0)
             val placesCorrectAnswer = sharedPref.getInt(Constants.HIGHEST_GODS_CORRECT_ANSWER, 0)
+            val weaponsCorrectAnswer = sharedPref.getInt(Constants.HIGHEST_WEAPONS_CORRECT_ANSWER, 0)
 
             var message: String = "The highest score for the Gods is currently $godsCorrectAnswer " +
-                    "The highest score for Places is currently $placesCorrectAnswer"
+                    "The highest score for Places is currently $placesCorrectAnswer" +
+                    "The highest score for Weapons is currently $weaponsCorrectAnswer"
 
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Previous Warrior")

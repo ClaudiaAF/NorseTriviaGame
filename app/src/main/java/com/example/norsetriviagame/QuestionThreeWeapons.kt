@@ -17,13 +17,14 @@ class QuestionThreeWeapons : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringExtra(Constants.USER_NAME)
+        //get previous answer
+        var weaponsCorrectAnswers = intent.getIntExtra(Constants.WEAPONS_CORRECT_ANSWER, 0)
 
         val questionsList = Constants.getWeaponryQuestions()
 
         //set question number and array
         val questionNumber: Int = 3
-        val question: Questions = questionsList[questionNumber-1]
+        val question: Questions = questionsList[2]
 
         //set UI elements to question 1
         tv_question_weapons3.text = question.question
@@ -36,31 +37,20 @@ class QuestionThreeWeapons : AppCompatActivity() {
 
         //set a button on click listener
         var answers: RadioButton
-        var correctAnswer: Int = 0
 
-        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-        tv_correctAnswer_weapons3.text = correctAnswers.toString()
 
         btn_next_weapons3.setOnClickListener{
             var id: Int = rg_options_weapons3.checkedRadioButtonId
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
-
-
-                Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
-
-
-
-                if (answers.text == question.optionThree){
-                    correctAnswer++
+                if (answers.text === question.optionThree){
+                    weaponsCorrectAnswers++
                 }
 
-                val correctAnswer = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-                tv_correctAnswer_weapons3.text = correctAnswer.toString()
 
-                val intent = Intent(this, ResultsGods::class.java)
-                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
+                intent = Intent(this, ResultsWeapons::class.java)
+                intent.putExtra(Constants.WEAPONS_CORRECT_ANSWER, weaponsCorrectAnswers)
                 startActivity(intent)
                 finish()
             } else {

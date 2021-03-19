@@ -45,7 +45,6 @@ class QuestionTwoGods : AppCompatActivity() {
                 //capture answer
                 answers = findViewById(id)
 
-
                 if (answers.text === question.optionThree){
                     godsCorrectAnswers++
                 }

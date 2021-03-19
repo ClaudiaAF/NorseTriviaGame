@@ -16,6 +16,7 @@ class QuestionOneGods : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
+        //get questions from constants
         val questionsList = Constants.getGodsQuestions()
 
         //set question number and array
