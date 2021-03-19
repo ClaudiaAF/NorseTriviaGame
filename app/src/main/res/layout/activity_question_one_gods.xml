@@ -92,7 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="15dp"
-                        android:layout_marginTop="140dp">
+                        android:layout_marginTop="160dp">
 
                         <RadioButton
                             android:id="@+id/rb_answer_one"
@@ -100,10 +100,11 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:text="Answer 1"
+                            android:padding="20dp"
                             android:textColor="@color/white"
                             android:background="@drawable/option"
                             android:textSize="24sp"
-                            android:layout_marginBottom="30dp">
+                            android:layout_marginBottom="35dp">
 
                         </RadioButton>
 
@@ -112,11 +113,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Answer 2"
+                            android:padding="20dp"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:background="@drawable/option"
                             android:textSize="24sp"
-                            android:layout_marginBottom="30dp">
+                            android:layout_marginBottom="35dp">
 
                         </RadioButton>
                         <RadioButton
@@ -124,6 +126,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
+                            android:padding="20dp"
                             android:text="Answer 3"
                             android:textColor="@color/white"
                             android:background="@drawable/option"

@@ -15,14 +15,14 @@ class QuestionThreeGods : AppCompatActivity() {
 
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-
-        val userName = intent.getStringExtra(Constants.USER_NAME)
+        //get previous answer
+        var godsCorrectAnswers = intent.getIntExtra(Constants.GODS_CORRECT_ANSWER, 0)
 
         val questionsList = Constants.getGodsQuestions()
 
         //set question number and array
         val questionNumber: Int = 3
-        val question: Questions = questionsList[questionNumber-1]
+        val question = questionsList[2]
 
         //set UI elements to question 1
         tv_question3.text = question.question
@@ -35,10 +35,6 @@ class QuestionThreeGods : AppCompatActivity() {
 
         //set a button on click listener
         var answers: RadioButton
-        var correctAnswer: Int = 0
-
-        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-        tv_correctAnswer3.text = correctAnswers.toString()
 
 
         btn_next3.setOnClickListener{
@@ -46,21 +42,12 @@ class QuestionThreeGods : AppCompatActivity() {
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
-
-
-                 Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
-
-
-
-                if (answers.text == question.optionTwo){
-                    correctAnswer++
+                if (answers.text === question.optionThree){
+                    godsCorrectAnswers++
                 }
 
-                val correctAnswer = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-                tv_correctAnswer3.text = correctAnswer.toString()
-
-                val intent = Intent(this, ResultsGods::class.java)
-                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
+                intent = Intent(this, ResultsGods::class.java)
+                intent.putExtra(Constants.GODS_CORRECT_ANSWER, godsCorrectAnswers)
                 startActivity(intent)
                 finish()
             } else {

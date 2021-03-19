@@ -3,7 +3,10 @@ package com.example.norsetriviagame
 object Constants {
 
     const val USER_NAME : String = "userName"
-    const val CORRECT_ANSWER : String = "correctAnswer"
+    const val GODS_CORRECT_ANSWER : String = "godsCorrectAnswer"
+    const val HIGHEST_GODS_CORRECT_ANSWER : String = "highestGodsCorrectAnswer"
+    const val PLACES_CORRECT_ANSWER : String = "placesWrongAnswer"
+    const val WEAPONS_WRONG_ANSWER : String = "weaponsWrongAnswer"
 
     fun getGodsQuestions(): ArrayList<Questions> {
 

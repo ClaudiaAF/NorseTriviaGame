@@ -16,13 +16,15 @@ class QuestionTwoGods : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringExtra(Constants.USER_NAME)
+        //get previous answer
+        var godsCorrectAnswers = intent.getIntExtra(Constants.GODS_CORRECT_ANSWER, 0)
 
+        //get questions list from constants
         val questionsList = Constants.getGodsQuestions()
 
         //set question number and array
         val questionNumber: Int = 2
-        val question: Questions = questionsList[questionNumber-1]
+        val question = questionsList[1]
 
         //set UI elements to question 1
         tv_question2.text = question.question
@@ -30,15 +32,12 @@ class QuestionTwoGods : AppCompatActivity() {
         rb2_answer_two.text = question.optionTwo
         rb2_answer_three.text = question.optionThree
 
+        //set progress bar
         pb_progressBar2.progress = questionNumber
         tv_progress2.text = questionNumber.toString() + "/" + questionsList.size.toString()
 
         //set a button on click listener
         var answers: RadioButton
-        var correctAnswer: Int = 0
-
-        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-        tv_correctAnswer2.text = correctAnswers.toString()
 
         btn_next2.setOnClickListener{
             var id: Int = rg2_options.checkedRadioButtonId
@@ -47,19 +46,13 @@ class QuestionTwoGods : AppCompatActivity() {
                 answers = findViewById(id)
 
 
-                 Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
-
-
-
-                if (answers.text == question.optionThree){
-                    correctAnswer++
+                if (answers.text === question.optionThree){
+                    godsCorrectAnswers++
                 }
 
-                val correctAnswer = intent.getIntExtra(Constants.CORRECT_ANSWER, 0)
-                tv_correctAnswer2.text = correctAnswer.toString()
 
-                val intent = Intent(this, QuestionThreeGods::class.java)
-                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
+                intent = Intent(this, QuestionThreeGods::class.java)
+                intent.putExtra(Constants.GODS_CORRECT_ANSWER, godsCorrectAnswers)
                 startActivity(intent)
                 finish()
             } else {

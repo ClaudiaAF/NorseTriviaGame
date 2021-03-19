@@ -16,14 +16,11 @@ class QuestionOneGods : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringArrayExtra(Constants.USER_NAME)
-
         val questionsList = Constants.getGodsQuestions()
-        Log.i("QuestionsList: ", "${questionsList.size}")
 
         //set question number and array
         val questionNumber: Int = 1
-        val question: Questions = questionsList[questionNumber-1]
+        val question = questionsList[0]
 
         //set UI elements to question 1
         tv_question.text = question.question
@@ -36,27 +33,20 @@ class QuestionOneGods : AppCompatActivity() {
 
         //set a button on click listener
         var answers: RadioButton
-        var correctAnswer: Int = 0
+        var godsCorrectAnswers: Int = 0
 
         btn_next.setOnClickListener{
-            var id: Int = rg_options.checkedRadioButtonId
+            var id = rg_options.checkedRadioButtonId
 
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
-
-
-                 Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
-
-
-
-                if (answers.text == question.optionOne){
-                    correctAnswer++
+                if (answers.text === question.optionOne){
+                    godsCorrectAnswers++
                 }
 //
-
-                val intent = Intent(this, QuestionTwoGods::class.java)
-                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
+                intent = Intent(this, QuestionTwoGods::class.java)
+                intent.putExtra(Constants.GODS_CORRECT_ANSWER, godsCorrectAnswers)
                 startActivity(intent)
                 finish()
             } else {
