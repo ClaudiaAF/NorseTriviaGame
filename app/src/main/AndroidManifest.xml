@@ -16,6 +16,8 @@
         <activity android:name=".QuestionTwoPlaces" />
         <activity android:name=".QuestionOnePlaces" />
         <activity android:name=".ResultsGods" />
+        <activity android:name=".ResultsPlaces" />
+        <activity android:name=".ResultsWeapons" />
         <activity android:name=".QuestionThreeGods" />
         <activity android:name=".QuestionTwoGods" />
         <activity android:name=".QuestionOneGods" />

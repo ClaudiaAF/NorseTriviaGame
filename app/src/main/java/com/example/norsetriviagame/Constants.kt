@@ -6,6 +6,7 @@ object Constants {
     const val GODS_CORRECT_ANSWER : String = "godsCorrectAnswer"
     const val HIGHEST_GODS_CORRECT_ANSWER : String = "highestGodsCorrectAnswer"
     const val PLACES_CORRECT_ANSWER : String = "placesWrongAnswer"
+    const val HIGHEST_PLACES_CORRECT_ANSWER : String = "highestPlacesWrongAnswer"
     const val WEAPONS_WRONG_ANSWER : String = "weaponsWrongAnswer"
 
     fun getGodsQuestions(): ArrayList<Questions> {

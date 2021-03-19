@@ -17,14 +17,11 @@ class QuestionOnePlaces : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringArrayExtra(Constants.USER_NAME)
-
         val questionsList = Constants.getPlacesQuestions()
-        Log.i("QuestionsList: ", "${questionsList.size}")
 
         //set question number and array
         val questionNumber: Int = 1
-        val question: Questions = questionsList[questionNumber-1]
+        val question: Questions = questionsList[0]
 
         //set UI elements to question 1
         tv_question_places.text = question.question
@@ -37,27 +34,21 @@ class QuestionOnePlaces : AppCompatActivity() {
 
         //set a button on click listener
         var answers: RadioButton
-        var correctAnswer: Int = 0
+        var placesCorrectAnswers: Int = 0
 
         btn_next_places.setOnClickListener{
-            var id: Int = rg_options_places.checkedRadioButtonId
+            var id = rg_options_places.checkedRadioButtonId
 
             if(id != -1){
                 //capture answer
                 answers = findViewById(id)
-
-
-                Toast.makeText(this,"Checked Answer: ${answers.text}", Toast.LENGTH_SHORT).show()
-
-
-
-                if (answers.text == question.optionTwo){
-                    correctAnswer++
+                if (answers.text === question.optionTwo){
+                    placesCorrectAnswers++
                 }
 //
 
-                val intent = Intent(this, QuestionTwoPlaces::class.java)
-                intent.putExtra(Constants.CORRECT_ANSWER, correctAnswer)
+                intent = Intent(this, QuestionTwoPlaces::class.java)
+                intent.putExtra(Constants.PLACES_CORRECT_ANSWER, placesCorrectAnswers)
                 startActivity(intent)
                 finish()
             } else {
