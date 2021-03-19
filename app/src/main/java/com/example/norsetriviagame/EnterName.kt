@@ -1,5 +1,6 @@
 package com.example.norsetriviagame
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,9 +24,16 @@ class EnterName : AppCompatActivity() {
             if(etname.text.toString().isEmpty()) {
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(this, CategoriesPage::class.java).apply {
-                    putExtra(USER_NAME, etname.text.toString())
+                var intent = Intent(this, CategoriesPage::class.java)
+
+                val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+                val editor = sharedPref.edit()
+
+                editor.apply{
+                    putString(Constants.USER_NAME, etname.text.toString())
+                    apply()
                 }
+
                 startActivity(intent)
                 finish()
             }
