@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_three_gods.*
 
@@ -15,6 +17,13 @@ class QuestionThreeGods : AppCompatActivity() {
 
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        val fade_in = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        val rg_options = findViewById<RadioGroup>(R.id.rg3_options)
+        val tv_question = findViewById<TextView>(R.id.tv_question3)
+
+        rg_options.startAnimation(fade_in)
+        tv_question.startAnimation(fade_in)
         //get previous answer
         var godsCorrectAnswers = intent.getIntExtra(Constants.GODS_CORRECT_ANSWER, 0)
 

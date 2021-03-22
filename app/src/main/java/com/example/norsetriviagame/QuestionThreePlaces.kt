@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_three_gods.*
 import kotlinx.android.synthetic.main.activity_question_three_places.*
@@ -16,6 +18,13 @@ class QuestionThreePlaces : AppCompatActivity() {
         setContentView(R.layout.activity_question_three_places)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        val fade_in = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        val rg_options = findViewById<RadioGroup>(R.id.rg_options_places3)
+        val tv_question = findViewById<TextView>(R.id.tv_question_places3)
+
+        rg_options.startAnimation(fade_in)
+        tv_question.startAnimation(fade_in)
         //get previous answer
         var placesCorrectAnswers = intent.getIntExtra(Constants.PLACES_CORRECT_ANSWER,0)
         //get questions list from constants

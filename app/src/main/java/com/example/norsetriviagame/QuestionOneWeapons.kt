@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_one_places.*
 import kotlinx.android.synthetic.main.activity_question_one_weapons.*
@@ -16,6 +18,13 @@ class QuestionOneWeapons : AppCompatActivity() {
         setContentView(R.layout.activity_question_one_weapons)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        val fade_in = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        val rg_options = findViewById<RadioGroup>(R.id.rg_options_weapons)
+        val tv_question = findViewById<TextView>(R.id.tv_question_weapons)
+
+        rg_options.startAnimation(fade_in)
+        tv_question.startAnimation(fade_in)
 
         //get questions from constants
         val questionsList = Constants.getWeaponryQuestions()

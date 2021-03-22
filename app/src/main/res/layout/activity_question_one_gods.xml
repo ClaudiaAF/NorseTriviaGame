@@ -73,12 +73,6 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/tv_correctAnswer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="correct answers"></TextView>
 
 
         <LinearLayout

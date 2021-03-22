@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_question_three_weapons.*
 import kotlinx.android.synthetic.main.activity_question_two_gods.*
@@ -19,6 +21,13 @@ class QuestionThreeWeapons : AppCompatActivity() {
 
         //get previous answer
         var weaponsCorrectAnswers = intent.getIntExtra(Constants.WEAPONS_CORRECT_ANSWER, 0)
+        val fade_in = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        val rg_options = findViewById<RadioGroup>(R.id.rg_options_weapons3)
+        val tv_question = findViewById<TextView>(R.id.tv_question_weapons3)
+
+        rg_options.startAnimation(fade_in)
+        tv_question.startAnimation(fade_in)
 
         val questionsList = Constants.getWeaponryQuestions()
 

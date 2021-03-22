@@ -19,6 +19,7 @@
         android:paddingTop="260dp">
 
         <ImageView
+            android:id="@+id/logo_splash"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:src="@drawable/norse_logo"
