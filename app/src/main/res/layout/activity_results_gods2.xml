@@ -23,13 +23,14 @@
         <Button
             android:id="@+id/back_to_categories_btn"
             android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="101dp"
+            android:layout_marginLeft="109dp"
             android:layout_marginTop="100dp"
-            android:backgroundTint="#ffff"
-            android:textColor="@color/black"
-            android:text="Another, Please" />
+            android:backgroundTint="@color/light_blue"
+            android:textColor="@color/dark_blue"
+            android:text="Another, Please"
+            android:textSize="16sp"/>
 
 
     </LinearLayout>
@@ -48,8 +49,8 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp">
+            android:textColor="@color/light_blue"
+            android:textSize="50sp">
 
         </TextView>
 

@@ -22,10 +22,10 @@ class ResultsGods : AppCompatActivity() {
         //set views based on score
        if (correctAnswers >= 2){
            setContentView(R.layout.activity_results_gods2)
-           result_score2.text = "$correctAnswers"
+           result_score2.text = "$correctAnswers/3"
        } else {
             setContentView(R.layout.activity_results_gods)
-           result_score.text = "$correctAnswers"
+           result_score.text = "$correctAnswers/3"
        }
 
         //get shared preferences

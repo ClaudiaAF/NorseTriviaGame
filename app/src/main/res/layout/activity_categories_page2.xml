@@ -33,8 +33,9 @@ android:orientation="vertical">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Hello Name"
-    android:textColor="@color/white"
+    android:textColor="@color/white_blue"
     android:textSize="30dp"
+    android:textStyle="bold"
     android:layout_gravity="center"
     android:layout_marginTop="30dp"
     >
@@ -48,7 +49,8 @@ android:orientation="vertical">
             android:text="Select your Challenge"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:textStyle="italic">
 
         </TextView>
 
@@ -56,34 +58,45 @@ android:orientation="vertical">
     android:id="@+id/places_category"
     android:layout_marginTop="40dp"
     android:layout_width="300dp"
+    app:icon="@drawable/ic_baseline_fireplace_24"
+    style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
     android:layout_height="90dp"
     app:iconGravity="textStart"
     android:text="PLACES"
-    android:textColor="@color/black"
+    android:textSize="20dp"
+    android:textColor="@color/white_blue"
     android:layout_gravity="center"
-    android:backgroundTint="@color/white"/>
+    android:backgroundTint="@color/dark_blue"/>
+
+
 
 <com.google.android.material.button.MaterialButton
     android:id="@+id/gods_category"
     android:layout_marginTop="40dp"
     android:layout_width="300dp"
+    app:icon="@drawable/ic_baseline_offline_bolt_24"
+    style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
     android:layout_height="90dp"
     app:iconGravity="textStart"
+    android:textSize="20dp"
     android:text="GODS"
-    android:textColor="@color/black"
+    android:textColor="@color/white_blue"
     android:layout_gravity="center"
-    android:backgroundTint="@color/white"/>
+    android:backgroundTint="@color/dark_blue"/>
 
 <com.google.android.material.button.MaterialButton
     android:id="@+id/weapons_category"
     android:layout_marginTop="40dp"
+    app:icon="@drawable/ic_baseline_gavel_24"
+    style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
     android:layout_width="300dp"
     android:layout_height="90dp"
     app:iconGravity="textStart"
+    android:textSize="20dp"
     android:text="WEAPONRY"
-    android:textColor="@color/black"
+    android:textColor="@color/white_blue"
     android:layout_gravity="center"
-    android:backgroundTint="@color/white" />
+    android:backgroundTint="@color/dark_blue" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_btn_reset"
@@ -98,13 +111,13 @@ android:orientation="vertical">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="30dp"
-
-        android:tint="@color/black"/>
+        android:src="@drawable/ic_baseline_format_list_numbered_rtl_24"
+        app:backgroundTint="@color/light_blue"/>
 
 
 </RelativeLayout>

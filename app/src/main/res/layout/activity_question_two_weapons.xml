@@ -74,13 +74,6 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/tv_correctAnswer_weapons2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="correct answers"></TextView>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,12 +140,13 @@
                 android:id="@+id/btn_next_weapons2"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/light_blue"
                 android:gravity="end"
                 android:layout_margin="10dp"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:text="Onwards"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 tools:ignore="RtlCompat"></Button>
         </LinearLayout>

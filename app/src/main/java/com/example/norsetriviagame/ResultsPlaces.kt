@@ -21,10 +21,10 @@ class ResultsPlaces : AppCompatActivity() {
         //set views based on score
         if (placesCorrectAnswer >= 2){
             setContentView(R.layout.activity_results_gods2)
-            result_score2.text = "$placesCorrectAnswer"
+            result_score2.text = "$placesCorrectAnswer/3"
         } else {
             setContentView(R.layout.activity_results_gods)
-            result_score.text = "$placesCorrectAnswer"
+            result_score.text = "$placesCorrectAnswer/3"
         }
 
         //get shared preferences

@@ -37,6 +37,7 @@ class CategoriesPage : AppCompatActivity() {
         places_card.startAnimation(scale_to_big)
         gods_card.startAnimation(scale_to_big)
         weapons_card.startAnimation(scale_to_big)
+        fab_btn.startAnimation(scale_to_big)
 
 
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)

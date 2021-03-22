@@ -75,12 +75,7 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/tv_correctAnswer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="correct answers"></TextView>
+
 
 
         <LinearLayout
@@ -106,6 +101,7 @@
                     android:textColor="@color/white"
                     android:background="@drawable/option"
                     android:textSize="24sp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="35dp">
 
                 </RadioButton>
@@ -148,11 +144,12 @@
                 android:id="@+id/btn_next2"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/light_blue"
                 android:gravity="end"
                 android:layout_margin="10dp"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:text="Onwards"
+                android:textColor="@color/white_blue"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 tools:ignore="RtlCompat"></Button>
