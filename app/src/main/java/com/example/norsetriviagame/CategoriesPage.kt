@@ -1,5 +1,7 @@
 package com.example.norsetriviagame
 
+import android.R.color.transparent
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_categories_page2.*
 
 class CategoriesPage : AppCompatActivity() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories_page2)
@@ -46,6 +49,8 @@ class CategoriesPage : AppCompatActivity() {
 
         val categorieshi = findViewById<TextView>(R.id.categories_hi)
 
+
+
         categorieshi.text = "Greetings $userName"
 
         val button = findViewById<Button>(R.id.gods_category)
@@ -66,6 +71,12 @@ class CategoriesPage : AppCompatActivity() {
 
         button_weapons.setOnClickListener{
             intent = Intent (this, QuestionOneWeapons::class.java)
+
+            startActivity(intent)
+        }
+
+        back_to_name.setOnClickListener{
+            intent = Intent (this, EnterName::class.java)
 
             startActivity(intent)
         }
@@ -101,6 +112,8 @@ class CategoriesPage : AppCompatActivity() {
             editor.clear()
             editor.commit()
         }
+
+
 
 
     }

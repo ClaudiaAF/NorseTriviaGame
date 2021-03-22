@@ -6,6 +6,8 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical">
 
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,6 +15,15 @@ android:orientation="vertical">
         android:src="@drawable/categories_background">
     </ImageView>
 
+    <ImageButton
+        android:id="@+id/back_to_name"
+        android:layout_width="66dp"
+        android:background="@android:color/transparent"
+        android:layout_height="72dp"
+        android:layout_margin="29dp"
+        android:scaleType="fitStart"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/back_button"></ImageButton>
 
 
     <LinearLayout
