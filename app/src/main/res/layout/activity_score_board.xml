@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/back_to_cat"
+        android:layout_width="96dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitStart"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/back_button"></ImageButton>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/leaderboard_background">
+    </ImageView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/categories_high"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="Hello Name"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/leaderboard_header"
+            android:layout_marginTop="100dp"
+            >
+
+        </ImageView>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/places_category"
+            android:layout_marginTop="40dp"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            app:iconGravity="textStart"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:src="@drawable/places_title">
+
+        </ImageView>
+
+    <TextView
+        android:id="@+id/places_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="50sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="60dp">
+
+
+    </TextView>
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/gods_category"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                app:iconGravity="textStart"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:src="@drawable/gods_title">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/gods_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:backgroundTint="@color/white"
+                android:textSize="50sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="110dp">
+
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/weaponry_category"
+                android:layout_marginTop="20dp"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                app:iconGravity="textStart"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:src="@drawable/weapons_title">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/weapons_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="50sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="40dp">
+
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+

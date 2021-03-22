@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.norsetriviagame">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/norse_app_icon"
         android:label="Norse"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/norse_app_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.NorseTriviaGame">
-        <activity android:name=".QuestionThreeWeapons"></activity>
+        <activity android:name=".ScoreBoard"></activity>
+        <activity android:name=".QuestionThreeWeapons" />
         <activity android:name=".QuestionTwoWeapons" />
         <activity android:name=".QuestionOneWeapons" />
         <activity android:name=".QuestionThreePlaces" />
@@ -22,13 +24,11 @@
         <activity android:name=".QuestionTwoGods" />
         <activity android:name=".QuestionOneGods" />
         <activity android:name=".CategoriesPage" />
-
         <activity
             android:name=".EnterName"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
