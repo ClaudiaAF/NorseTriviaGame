@@ -159,6 +159,12 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
     
 ## Demo Video
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64257497/112344232-90790780-8ccc-11eb-8ced-aca040424239.gif" width="30%" align="center" />
+
+[Watch full walkthrough here](https://drive.google.com/file/d/1hzsGmtdWBTvAcvzFOXMm6d3NyerxqdmM/view?usp=sharing)
+</p>
+
 ## Roadmap
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
@@ -175,7 +181,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Author
 
-
+[ClaudiaAF](https://github.com/ClaudiaAF/)
 
 <!-- LICENSE -->
 ## License
@@ -205,18 +211,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@gradientnoodles](https://twitter.com/twitter_handle) - email
+Twitter - [@gradientnoodles](https://twitter.com/gradientnoodles)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Instagram - [@claudiasomethingferreira](https://www.instagram.com/claudiasomethingferreira)
+
+Project Link: [https://github.com/ClaudiaAF/NorseTriviaGame](https://github.com/ClaudiaAF/NorseTriviaGame)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Johan Egerkrans illustrations]()
-* [Kotlin Documentation]()
-* [Github]()
+* [Johan Egerkrans illustrations](https://www.artstation.com/egerkrans)
+* [Kotlin Documentation](https://kotlinlang.org/docs/home.html)
+* [Plagiarism Form](https://drive.google.com/file/d/1S3GUx2nPswf3Y9nk1LurwgW3MMipI-8Y/view?usp=sharing)
 
 
 
