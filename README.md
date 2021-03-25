@@ -46,6 +46,7 @@
         <li><a href="#peer-reviews">Peer Reviews</a></li>
       </ul>
     </li>
+    <li><a href="#mockups">Mockups</a></li>
     <li><a href="#demo-video">Demo Video</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -156,6 +157,20 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
         <li><p>The greeting text was also changed accordingly to better suit the theme of the app</p></li>
       </ul>
     </li>
+    
+## Mockups
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64257497/112457063-0da38b80-8d64-11eb-98d9-1482ec82c791.png" width="80%" align="center" />
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64257497/112456750-b7cee380-8d63-11eb-9bcf-e14986145941.png" width="80%" align="center" />
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64257497/112457134-214ef200-8d64-11eb-96e5-75352a654e68.png" width="80%" align="center" />
+</p>
     
 ## Demo Video
 
